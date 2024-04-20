@@ -12,8 +12,7 @@ COPY . .
 EXPOSE 8884
 
 ENV PORT=8884
-ENV MONGODB_URI=mongodb+srv://programmingpr12:ashishkumar12@social-media-ai.b8u7f2i.mongodb.net/Backend-API?retryWrites=true&w=majority
-ENV CORS_ORIGIN=*
+ENV MONGODB_URI=""
 ENV ACCESS_TOKEN_SECRET=d28533cf-d4b2-4919-a59a-97322652023f
 ENV ACCESS_TOKEN_EXPIRY=1d
 ENV REFRESH_TOKEN_SECRET=ba9a5496-0804-40dc-bc94-748e30177859
