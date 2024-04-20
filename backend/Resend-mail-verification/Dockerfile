@@ -1,0 +1,30 @@
+
+FROM node:18-alpine 
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8882
+
+ENV PORT=8882
+ENV MONGODB_URI=mongodb+srv://programmingpr12:ashishkumar12@social-media-ai.b8u7f2i.mongodb.net/Backend-API?retryWrites=true&w=majority
+ENV CORS_ORIGIN=*
+ENV ACCESS_TOKEN_SECRET=d28533cf-d4b2-4919-a59a-97322652023f
+ENV ACCESS_TOKEN_EXPIRY=1d
+ENV REFRESH_TOKEN_SECRET=ba9a5496-0804-40dc-bc94-748e30177859
+ENV REFRESH_TOKEN_EXPIRY=10d
+ENV REDIS_HOST=Redis
+ENV REDIS_PORT=6379
+ENV REDIS_PREFIX=master-backend
+ENV REDIS_EXPIRE=60*60
+ENV SMTP_EMAIL=frontend236@gmail.com
+ENV SMTP_PASSWORD=winfxjmqwiypvgut
+ENV SMTP_HOST=smtp.gmail.com
+ENV SMTP_PORT=587
+
+CMD ["npm", "run", "start"]
